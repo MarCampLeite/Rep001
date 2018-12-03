@@ -1,0 +1,50 @@
+//Teclado.prg
+//Codificado em Clipper 5.0
+//Simula um teclado musical
+//Autor: Mario Leite  
+FUNCTION Orgao()
+LOCAL GETLIST:={}; cTecla:=" "  //inicializa o objeto GETLIST{}
+CLS
+SETCOLOR("W/N,X")
+WHILE LASTKEY()!=27  //enquanto não for pressionada a tecla <Esc>
+   @ 07,20  TO  20,60 DOUBLE
+   @ 12,20  TO  20,60 DOUBLE
+   @ 08,32  SAY "Órgão Eletrônico"
+   @ 10,23  SAY "Use as letras maiúsculas: Q-P  e  A-L" 
+   @ 11,23  SAY "Para sair, pressione a tecla <ESC>" 
+   cTecla := " "
+   @ 16,38 GET cTecla PICTURE "@!" VALID(Toca(cTecla)) 
+   READ
+ENDDO
+CLS
+RETURN (.T.)
+//--------------------------------------------------------
+//Define a função Toca()
+FUNCTION Toca(cVar)
+LOCAL nTom := 0 
+LOCAL sTring := "QWERTYUIOPASDFGHJKL"  //string de letras
+DO CASE 
+	CASE	cVar == "Q";  	nTom := 262
+	CASE	cVar == "W";  	nTom := 294
+   	CASE cVar == "E";	  nTom := 330
+	CASE	cVar == "R";  nTom := 350
+	CASE	cVar == "T";	  nTom := 392
+	CASE	cVar == "Y";	  nTom := 440
+	CASE	cVar == "U"; 	 nTom := 494
+	CASE	cVar == "I";	  nTom := 546
+	CASE	cVar == "O";  	nTom := 596
+	CASE	cVar == "P";	  nTom := 644
+	CASE	cVar == "A";	  nTom := 131
+	CASE	cVar == "S";	  nTom := 147
+	CASE	cVar == "D";	  nTom := 165
+	CASE	cVar == "F";	  nTom := 175
+	CASE	cVar == "G";	  nTom := 196
+	CASE	cVar == "H";	  nTom := 220
+	CASE	cVar == "J";	  nTom := 247
+	CASE	cVar == "K";	  nTom := 277
+	CASE	cVar == "L";	  nTom := 307
+ENDCASE
+IF(cVar $ sTring) //verifica se a letra pressionada pertence à string
+   TONE(nTom, 0.5) 
+ENDIF
+RETURN (.T.)
