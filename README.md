@@ -1,14 +1,15 @@
 # Rep001
-Programa "SobreTestePHD"
-//Programa "TesteParaPHD"
-//Codiicado em C
-//Autor: Mário Leite
-//marleite@gmail.com
-//Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, //para teste de admissão de professor titular //em universidade.
 
-//Autor  : Mário Leite
-//E-mail : marleite@gmail.com
-----------------------------------------------------------------------------------------------------------------------------------------
+Programa "SobreTestePHD"
+
+Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, para teste de admissão de professor titular em universidade.
+
+Autor: Mário Leite<br>
+E-mail: marleite[at]gmail.com
+
+<hr>
+
+```c
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -42,3 +43,4 @@ int main() {
   getch();
   return 0;
 }
+```
