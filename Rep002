@@ -1,7 +1,8 @@
 //Teclado.prg
 //Codificado em Clipper 5.0
 //Simula um teclado musical
-//Autor: Mario Leite  
+//Autor: Mário Leite 
+//marleite@gmail.com 
 FUNCTION Orgao()
 LOCAL GETLIST:={}; cTecla:=" "  //inicializa o objeto GETLIST{}
 CLS
