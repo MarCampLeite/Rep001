@@ -1,7 +1,8 @@
 //Teclado.C
 //Simula um ambiente musical que reproduz o som de uma sequência de letras.
 //Codificado em C
-//Autor: Mario Leite  
+//Autor: Mário Leite
+//marleite@gmail.com
 //-------------------------------------------------------------------------
 #include <stdio.h>
 #include <ctype.h>
