@@ -1,12 +1,11 @@
 # Rep001
 Programa "SobreTestePHD"
-
 //Programa "TesteParaPHD"
-//Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, //para teste de admissão de professor titular em universidade.
+//Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, //para teste de admissão de professor titular //em universidade.
 
 //Autor  : Mário Leite
 //E-mail : marleite@gmail.com
-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
