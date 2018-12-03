@@ -1,5 +1,5 @@
 # Rep001
-Progarma "SobreTestePHD"
+Programa "SobreTestePHD"
 
 //Programa "TesteParaPHD"
 //Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, //para teste de admissão de professor titular em universidade.
