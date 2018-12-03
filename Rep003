@@ -1,0 +1,74 @@
+//Teclado.C
+//Simula um ambiente musical que reproduz o som de uma sequência de letras.
+//Codificado em C
+//Autor: Mario Leite  
+//-------------------------------------------------------------------------
+#include <stdio.h>
+#include <ctype.h>
+#include <conio.h>
+#include <windows.h>
+int main(){
+  int tempo=300; //tempo de duração do som em milissegundos
+  int freq; 
+  char tecla;
+  while((tecla=getchar())!=EOF) {  //até pressionar <Enter>
+     	tecla = toupper(tecla);
+  	switch(tecla){
+        case 'Q':
+          freq = 262; break;
+        case 'W':
+          freq = 294; break;
+        case 'E':
+          freq = 330; break;
+        case 'R':
+          freq = 350; break;
+        case 'T':
+          freq = 392; break;
+        case 'Y':
+          freq = 440; break;
+        case 'U':
+          freq = 494; break;
+        case 'I':
+          freq = 546; break;
+        case 'O':
+          freq = 596; break;
+        case 'P':
+          freq = 644; break;
+        case 'A':
+          freq = 131; break;
+        case 'S':
+          freq = 147; break;
+        case 'D':
+          freq = 165; break;
+        case 'F':
+          freq = 175; break;
+        case 'G':
+          freq = 196; break;
+        case 'H':
+          freq = 220; break;
+        case 'J':
+          freq = 247; break;
+        case 'K':
+          freq = 277; break;
+        case 'L':
+          freq = 307; break;
+        case 'Z':
+          freq = 700; break;
+        case 'X':
+          freq = 720; break;
+        case 'C':
+          freq = 730; break;
+        case 'V':
+          freq = 740; break;
+        case 'B':
+          freq = 750; break;
+        case 'N':
+          freq = 760; break;
+        case 'M':
+          freq = 770; break;
+     	}   
+     	Beep(freq,tempo); //executa o som
+    }   
+    getch();
+    return 0;
+  }
