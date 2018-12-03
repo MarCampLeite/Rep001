@@ -1,6 +1,9 @@
 # Rep001
 Programa "SobreTestePHD"
 //Programa "TesteParaPHD"
+//Codiicado em C
+//Autor: Mário Leite
+//marleite@gmail.com
 //Sorteia três conjuntos de assuntos acadêmicos, tirados de quatro, com cinco itens cada, //para teste de admissão de professor titular //em universidade.
 
 //Autor  : Mário Leite
