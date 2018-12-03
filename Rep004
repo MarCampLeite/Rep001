@@ -1,0 +1,64 @@
+Public Class FrmTeclado
+    'Codificado em Vb.net
+    'Simula um teclado musical
+    'Autor: Mário Leite
+    'marleite@gmail.com 
+    '------------------------------------------------------------------------------------
+    'Declara a função Beep() para ser usada com dois argumentos (frquência,duração)
+    Declare Function Beep Lib "kernel32.dll" (ByVal dwFreq As Integer, ByVal dwDuration _
+    As Integer) As Boolean
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) _
+        Handles TxtTeclado.KeyPress
+        Dim cVar As String
+        Dim nTom As Integer
+        Dim Tempo As Integer
+        TxtTeclado.CharacterCasing = vbUpperCase  'obriga o texto a exibir em mauisculas
+        Tempo = 100  'tempo de duração do som; pode ser alterado
+        cVar = e.KeyChar  'captura a letra digitada
+        cVar = UCase(cVar)
+        Select Case (cVar)  'seleciona a frequência de acordco com a letra digitada
+            Case "Q"
+                nTom = 262
+            Case "W"
+                nTom = 294
+            Case "E"
+                nTom = 330
+            Case "R"
+                nTom = 350
+            Case "T"
+                nTom = 392
+            Case "Y"
+                nTom = 440
+            Case "U"
+                nTom = 494
+            Case "I"
+                nTom = 546
+            Case "O"
+                nTom = 596
+            Case = "P"
+                nTom = 644
+            Case "A"
+                nTom = 131
+            Case "S"
+                nTom = 147
+            Case "D"
+                nTom = 165
+            Case "F"
+                nTom = 175
+            Case "G"
+                nTom = 196
+            Case "H"
+                nTom = 220
+            Case "J"
+                nTom = 247
+            Case "K"
+                nTom = 277
+            Case "L"
+                nTom = 307
+        End Select
+        Beep(nTom, Tempo)  'emite o som correspondente
+    End Sub
+    Private Sub BtnEncerrar_Click(sender As Object, e As EventArgs) Handles BtnEncerrar.Click
+        End  'encerra o programa incondicionalmente
+    End Sub
+End Class
